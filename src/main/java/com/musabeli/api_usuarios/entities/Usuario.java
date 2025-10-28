@@ -13,7 +13,7 @@ import java.util.Set;
 @Table(name = "USUARIO")
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
+@Builder(toBuilder = true)
 @Data
 public class Usuario {
 
