@@ -34,5 +34,6 @@ public class Usuario {
             joinColumns = @JoinColumn(name = "USUARIO_ID"),
             inverseJoinColumns = @JoinColumn(name = "ROL_ID")
     )
+    @Builder.Default
     private Set<Rol> roles = new HashSet<>();
 }
