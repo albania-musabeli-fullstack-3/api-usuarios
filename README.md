@@ -5,13 +5,13 @@ Api desarrollada en Springboot para la gestión de usuarios.
 
 ## Dependencias
 
-|Initializr             |Maven                          |
-|-----------------------|-------------------------------|
-|Spring Web             |Oracle Driver (ojdbc 11)       |
-|Springboot Devtools    |Oracle pki                     |
-|Lombok                 |osdt core                      |
-|Oracle Driver          |osdt cert                      |
-|Spring Data JPA        |Springboot starter validation  |
+| Initializr          | Maven                         |
+|---------------------|-------------------------------|
+| Spring Web          | Oracle Driver (ojdbc 11)      |
+| Springboot Devtools | Oracle pki                    |
+| Lombok              | osdt core                     |
+| Oracle Driver       | osdt cert                     |
+| Spring Data JPA     | Springboot starter validation |
 
 
 ## Endpoints para ambiente Desarrollo
@@ -29,7 +29,7 @@ Api desarrollada en Springboot para la gestión de usuarios.
 * **LOGIN**: Inicio de sesión: http://localhost:8080/api/usuario/login
 
 
-## Ejemplo de request body - Usuario
+## Ejemplo de request body para crear un Usuario
 
 ```json
 {
@@ -52,6 +52,9 @@ ORACLE_USERNAME=username
 ORACLE_PASSWORD=pass123
 API_PORT=8080
 ```
+
+## Se agrega archivo `data.sql` para la carga inicial de datos.
+
 
 ## Ejemplo de request body - Inicio de Sesión
 
