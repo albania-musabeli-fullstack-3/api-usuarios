@@ -25,5 +25,6 @@ public class Rol {
 
     @ManyToMany(mappedBy = "roles")
     @JsonIgnore
+    @Builder.Default
     private Set<Usuario> usuarios = new HashSet<>();
 }
