@@ -53,8 +53,12 @@ ORACLE_PASSWORD=pass123
 API_PORT=8080
 ```
 
-## Se agrega archivo `data.sql` para la carga inicial de datos.
+## Se agrega archivo `data.sql` 
 
+Para la carga inicial de datos ubicado en: 
+```
+src/main/resources/data.sql
+```
 
 ## Ejemplo de request body - Inicio de Sesión
 
