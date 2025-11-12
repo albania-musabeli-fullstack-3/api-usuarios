@@ -4,7 +4,6 @@ import com.musabeli.api_usuarios.dto.CreateUsuarioDto;
 import com.musabeli.api_usuarios.dto.LoginRequestDto;
 import com.musabeli.api_usuarios.dto.ResponseUsuarioDto;
 import com.musabeli.api_usuarios.dto.UpdateUsuarioDto;
-import com.musabeli.api_usuarios.entities.Usuario;
 import com.musabeli.api_usuarios.services.UsuarioService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/usuario")
+@CrossOrigin(originPatterns = "*", methods = {RequestMethod.POST, RequestMethod.OPTIONS})
 public class UsuarioController {
 
     @Autowired

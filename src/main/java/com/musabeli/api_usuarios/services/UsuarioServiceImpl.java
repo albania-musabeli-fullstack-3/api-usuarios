@@ -14,7 +14,6 @@ import com.musabeli.api_usuarios.repositories.RolRepository;
 import com.musabeli.api_usuarios.repositories.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
