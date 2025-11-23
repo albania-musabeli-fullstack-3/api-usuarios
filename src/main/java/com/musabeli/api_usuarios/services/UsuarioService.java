@@ -1,9 +1,6 @@
 package com.musabeli.api_usuarios.services;
 
-import com.musabeli.api_usuarios.dto.CreateUsuarioDto;
-import com.musabeli.api_usuarios.dto.LoginRequestDto;
-import com.musabeli.api_usuarios.dto.ResponseUsuarioDto;
-import com.musabeli.api_usuarios.dto.UpdateUsuarioDto;
+import com.musabeli.api_usuarios.dto.*;
 
 import java.util.List;
 
@@ -16,4 +13,5 @@ public interface UsuarioService {
     ResponseUsuarioDto updateUsuario(Long id, UpdateUsuarioDto usuarioDto);
     ResponseUsuarioDto deleteUsuario(Long id);
     ResponseUsuarioDto login(LoginRequestDto loginDto);
+    ResponseUsuarioPasswordDto recuperarPassword(String correo);
 }

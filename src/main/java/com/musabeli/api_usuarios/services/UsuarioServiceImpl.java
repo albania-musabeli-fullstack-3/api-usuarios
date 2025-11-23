@@ -1,9 +1,6 @@
 package com.musabeli.api_usuarios.services;
 
-import com.musabeli.api_usuarios.dto.CreateUsuarioDto;
-import com.musabeli.api_usuarios.dto.LoginRequestDto;
-import com.musabeli.api_usuarios.dto.ResponseUsuarioDto;
-import com.musabeli.api_usuarios.dto.UpdateUsuarioDto;
+import com.musabeli.api_usuarios.dto.*;
 import com.musabeli.api_usuarios.entities.Rol;
 import com.musabeli.api_usuarios.entities.Usuario;
 import com.musabeli.api_usuarios.exceptions.InvalidCredentialsException;
@@ -139,6 +136,15 @@ public class UsuarioServiceImpl implements UsuarioService{
         else {
             throw new InvalidCredentialsException("Error al iniciar sesión. Correo y/o contraseña inválidos");
         }
+    }
+
+
+    @Override
+    public ResponseUsuarioPasswordDto recuperarPassword(String correo) {
+        Usuario usuario = usuarioRepository.findByCorreo(correo)
+                .orElseThrow(() -> new ResourceNotFoundException("No se encontró usuario con el correo: " + correo));
+
+        return UsuarioMapper.toResponseConPasswordDto(usuario);
     }
 
 
